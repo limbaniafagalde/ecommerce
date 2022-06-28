@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import {useQuery} from "urql"
-import { PRODUCT_QUERY } from '../lib/query'
-
+import { PRODUCT_QUERY } from '../lib/query';
+import Product from '../components/Product';
 
 export default function Home() {
 
@@ -26,8 +26,7 @@ export default function Home() {
       <main>
         <h1>Hello Next</h1>
         {products.map((product) => (
-          <h1>{product.attributes.title}</h1>
-
+          <Product key={product.attributes.slug} product={product}/>
         ))}
       </main>
 

@@ -1,13 +1,17 @@
 import { ProductStyle } from "../styles/ProductStyle"; //{} im not using export DEFAULT becouse is something specific
+import Link from "next/link";
 
 export default function Product({ product }){
     //Extract info from props
-    const {title, price, image} = product.attributes;
+    const {title, price, image,slug} = product.attributes;
     return(
-        <ProductStyle>
-            <div>
-                <img src={image.data.attributes.formats.small.url} alt="" />
-            </div>
+        <ProductStyle> 
+            <Link href={`/product/${slug}`}> 
+                <div>
+                    <img src={image.data.attributes.formats.small.url} alt="" />
+                </div>            
+            </Link>
+
             <h2>{title}</h2>
             <h3>{price}</h3>
         </ProductStyle>

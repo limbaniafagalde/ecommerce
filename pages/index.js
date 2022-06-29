@@ -25,7 +25,6 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Next</h1>
         <Gallery>
 
           {products.map((product) => (

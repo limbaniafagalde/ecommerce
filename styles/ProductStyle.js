@@ -10,7 +10,6 @@ export const ProductStyle = styled.div`
 
     img{
         width: 100%;
-      //  height: 400px;
         cursor: pointer;
     }
 

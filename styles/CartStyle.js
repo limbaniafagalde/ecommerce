@@ -76,7 +76,3 @@ export const EmptyStyle = styled.div`
 
 `;
 
-
-export const Quantity =styled.div`
-
-`;

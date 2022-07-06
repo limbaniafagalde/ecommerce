@@ -5,6 +5,7 @@ import { Details, ProductInfo, Quantity, Buy } from "../../styles/ProductDetails
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { useStateContext } from "../../lib/context";
 
+
 export default function ProductDetails(){
 
     //Use State
@@ -15,7 +16,7 @@ export default function ProductDetails(){
 
 
     //Fetch Graphql data
-     const [results] = useQuery({
+     const [results] = useQuery({ 
         query: GET_PRODUCT_QUERY,
         variables: { slug: query.slug },
     });

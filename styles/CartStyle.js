@@ -90,3 +90,5 @@ export const CheckOut = styled(motion.div)`
    }
 
 `;
+
+export const Cards = styled(motion.div)``;

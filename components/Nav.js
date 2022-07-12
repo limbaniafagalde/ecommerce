@@ -4,7 +4,7 @@ import { NavStyle, NavItems } from "../styles/NavStyle";
 import Cart from "./Cart";
 import { useStateContext } from "../lib/context";
 
-const {AnimatePresence} = require('framer-motion');
+const {AnimatePresence, motion} = require('framer-motion');
 
 
 export default function Nav(){
@@ -17,7 +17,7 @@ export default function Nav(){
             <NavItems>
                 <div onClick={() => setShowCart(true)}>
 
-                    { totalQuantities > 0 && <span> { totalQuantities } </span> }               
+                    { totalQuantities > 0 && <motion.span animate= {{scale: 2}} initial = {{scale: 0}}> { totalQuantities } </motion.span> }               
 
                     <FiShoppingBag/>
                     <h3>Cart</h3>

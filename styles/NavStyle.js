@@ -36,10 +36,10 @@ export const NavItems = styled.div`
     span{
         background: #ff2626;
         color: white;
-        width: 1.3rem;
-        height: 1.3rem;
+        width: 0.8rem;
+        height: 0.8rem;
         border-radius: 50%;
-        font-size: 0.75rem;
+        font-size: 0.5rem;
         pointer-events: none;
         /* For the relative position of the div */
         position: absolute;

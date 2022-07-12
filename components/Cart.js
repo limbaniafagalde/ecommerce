@@ -39,7 +39,8 @@ export default function Cart () {
             animate = {{ x: "0%" }}            
             exit = {{ x: "50%" }}
             transition = {{type: "tween"}}
-            onClick={(e)=> e.stopPropagation()}>
+            onClick = {(e)=> e.stopPropagation()}
+            >
                 {cartItems.length < 1 && (
                     <EmptyStyle
                         animate = {{ opacity: 1, scale: 1 }}
@@ -51,11 +52,11 @@ export default function Cart () {
                     </EmptyStyle>
                 )}
 
-                <Cards variants= {cards} animate= "show" initial = "hidden" >
+                <Cards layout variants= {cards} animate= "show" initial = "hidden" >
                     {cartItems.length >= 1 && 
                         cartItems.map((item) => {
                             return(
-                                <Card variants = {card} key={item.slug}>
+                                <Card layout variants = {card} key={item.slug}>
                                     <img src={item.image.data.attributes.formats.thumbnail.url} alt={item.title} />
                                     <CardInfo>
                                         <h3>{item.title}</h3>
@@ -79,7 +80,7 @@ export default function Cart () {
                 </Cards>
 
                 {cartItems.length >= 1 && (
-                    <CheckOut>
+                    <CheckOut layout>
                         <h3>Subtotal: {totalPrice}$</h3>
                         <button>Purchase</button>
                     </CheckOut>

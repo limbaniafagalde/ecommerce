@@ -32,7 +32,7 @@ export default function ProductDetails(){
 
     return(
         <Details>
-            <img src={image.data.attributes.formats.medium.url} alt={title} />
+            <img src={image.data.attributes.formats.small.url} alt={title} />
             <ProductInfo>
                 <h3>{title}</h3>
                 <p>{description}</p>

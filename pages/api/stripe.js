@@ -18,8 +18,8 @@ if (req.method === "POST") {
 
             allow_promotion_codes: true,
             shipping_options: [
-              { shipping_rate: "shr_1L7HGSJvB7fsxaM1DbSs7DeV" },
-              { shipping_rate: "shr_1L7HGyJvB7fsxaM1OpMXx2Fn" },
+              { shipping_rate: "shr_1LRtIpC0qcCq1oLwm8pT46yT" },
+              { shipping_rate: "shr_1LRtVIC0qcCq1oLwwme5i5bI" }, 
             ],
 
             line_items: req.body.map((item) => {

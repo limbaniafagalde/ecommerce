@@ -42,7 +42,7 @@ if (req.method === "POST") {
                 };
             }),
             //Bring people to the success or failed page
-            success_url: `${req.headers.origin}/success`,
+            success_url: `${req.headers.origin}/success?&session_id={CHECKOUT_SESSION_ID}`, //I`ll send the info of the session to the success page
             cancel_url: `${req.headers.origin}/canceled`,
         });
         res.status(200).json(session);

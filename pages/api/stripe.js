@@ -1,7 +1,7 @@
 //handle checkout
 import Stripe from "stripe";
 const stripe = new Stripe(`${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`);
-import { GetSession } from "@auth0/nextjs-auth0/dist/session";
+import { getSession } from "@auth0/nextjs-auth0";
 
 export default async function handler(req, res) {
 

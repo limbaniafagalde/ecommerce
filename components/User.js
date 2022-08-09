@@ -17,7 +17,7 @@ export default function User () {
         );
     return(
         <Profile onClick={() => route.push("/profile")}>
-            <img src={user.picture} alt={user.name} ></img>
+            <img src={user.picture} alt={user.name} />
             <h3>{user.name}</h3>
         </Profile>
     )

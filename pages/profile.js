@@ -31,7 +31,7 @@ export default function Profile({user, orders}){
                         </Order>
                     ))}
                 </div>
-                <button onClick={()=> route.push("/api/auth/logout")}>Logout</button>
+                <LogOut onClick={()=> route.push("/api/auth/logout")}>Logout</LogOut>
             </div>
         )
     )
@@ -52,3 +52,13 @@ const Order = styled.div`
     }
 
 `;
+
+const LogOut = styled.div`
+      background: var(--primary);
+      padding: 1rem 2rem;
+      width: 10%;
+      color: white;
+      font-weight: 600;
+      margin-top : 2rem;
+      cursor: pointer;
+      border: none;`;
